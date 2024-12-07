@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localidades do Brasil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #svgContainer {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Localidades do Brasil</h1>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="estados" class="form-label">Selecione um estado:</label>
+                <select id="estados" class="form-select">
+                    <option value="">Carregando estados...</option>
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="municipios" class="form-label">Selecione um município:</label>
+                <select id="municipios" class="form-select" disabled>
+                    <option value="">Selecione um estado primeiro</option>
+                </select>
+    
+            </div>
+
+            <button id="verSVG" class="btn btn-primary" disabled>Ver SVG</button>
+
+        </div>
+        
+        
+        <div id="svgContainer">
+            <p>O SVG aparecerá aqui.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
